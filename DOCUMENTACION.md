@@ -72,3 +72,39 @@ CREATE TABLE IF NOT EXISTS ventas (
     total DECIMAL(10,2) NOT NULL,
     usuario TEXT NOT NULL
 );
+
+
+🔐 Licenciamiento del Software
+El sistema utiliza un esquema de clave de activación alfanumérica estructurado de la siguiente forma:
+
+Formato de Clave: SGPC-Y5UY-MANDARINA-365D
+
+Ejemplo de Activación: SGPC-6586-MANDARINA-365D
+
+Validez: Licencia de uso continuo por 1 año gestionada desde FormAcercaDe.vb.
+
+🚀 Despliegue e Instalación en Cliente
+Compilar el proyecto en modo Release.
+
+Copiar el contenido de la carpeta bin/Release/ al pendrive.
+
+Copiar la carpeta completa en la PC del cliente en la ruta: C:\SystemGregoryPC\MandarinaPOS\.
+
+Crear acceso directo en el escritorio apuntando a MandarinaCodePOS.exe.
+
+Asignar icono institucional (.ico) de 108 KB.
+
+
+---
+
+### ¿Cómo agregar este archivo directamente a tu proyecto en Visual Studio?
+
+1. En Visual Studio, ve al explorador a la derecha (**Explorador de soluciones**).
+2. Haz clic derecho sobre el nombre de tu proyecto (`MandarinaCodePOS`).
+3. Selecciona **Agregar** > **Nuevo elemento...**
+4. Selecciona **Archivo de texto** (o *Text File*), nómbralo **`DOCUMENTACION.md`** y haz clic en **Agregar**.
+5. Copia y pega el texto de arriba dentro del archivo y presiona `Ctrl + S` para guardar.
+
+De esta forma, tendrás la guía técnica y el resumen completo guardado dentro del mismo código de Visual Studio.
+
+
