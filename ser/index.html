@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandarina Code POS | System Gregory PC</title>
-    <!-- Tailwind CSS CDN para estilos rápidos y modernos -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -12,10 +12,18 @@
             theme: {
                 extend: {
                     colors: {
-                        mandarina: {
-                            500: '#f97316',
-                            600: '#ea580c',
-                            700: '#c2410c',
+                        cielo: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
                         }
                     }
                 }
@@ -23,128 +31,133 @@
         }
     </script>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-sky-200 text-sky-950 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Navegación -->
-    <nav class="border-b border-gray-800 bg-gray-900/90 backdrop-blur fixed w-full z-50">
+    <!-- Barra de Menú -->
+    <nav class="bg-sky-600 text-white shadow-lg sticky top-0 z-50 border-b border-sky-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-mandarina-500 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-mandarina-500/30">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-sky-600 font-bold text-xl shadow">
                         🍊
                     </div>
-                    <span class="font-bold text-xl tracking-tight text-white">Mandarina Code <span class="text-mandarina-500">POS</span></span>
+                    <span class="font-bold text-xl tracking-tight">Mandarina Code <span class="text-sky-200">POS</span></span>
                 </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
-                    <a href="#caracteristicas" class="hover:text-mandarina-500 transition">Características</a>
-                    <a href="#licencia" class="hover:text-mandarina-500 transition">Licenciamiento</a>
-                    <a href="#contacto" class="hover:text-mandarina-500 transition">Contacto</a>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold">
+                    <a href="#caracteristicas" class="hover:text-sky-200 transition">Características</a>
+                    <a href="#licencia" class="hover:text-sky-200 transition">Licencia</a>
+                    <a href="#contacto" class="hover:text-sky-200 transition">Contacto</a>
                 </div>
                 <div>
-                    <a href="https://wa.me/584161177334" target="_blank" class="bg-mandarina-600 hover:bg-mandarina-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-md shadow-mandarina-600/20 flex items-center gap-2">
-                        <i class="fab font-bold fa-whatsapp"></i> Contactar
+                    <a href="https://wa.me/584161177334" target="_blank" class="bg-white text-sky-700 hover:bg-sky-50 px-4 py-2 rounded-lg text-sm font-bold shadow transition flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-green-600 font-bold"></i> Contactar
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <span class="text-mandarina-500 font-semibold tracking-wider uppercase text-xs bg-mandarina-500/10 px-3 py-1 rounded-full border border-mandarina-500/20">
-            Desarrollado por System Gregory PC
-        </span>
-        <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-6 mb-6 tracking-tight leading-tight">
-            El Sistema de Punto de Venta <br class="hidden sm:inline"/> Rápido, Robusto y Eficiente
-        </h1>
-        <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-            Diseñado para optimizar el inventario, agilizar la facturación y mantener el control total de las ventas en tiendas y comercios.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://wa.me/584161177334?text=Hola,%20deseo%20información%20sobre%20Mandarina%20Code%20POS" target="_blank" class="bg-mandarina-600 hover:bg-mandarina-500 text-white px-8 py-3 rounded-lg font-bold text-base transition shadow-lg shadow-mandarina-600/30">
-                Solicitar Demostración
-            </a>
-            <a href="#caracteristicas" class="bg-gray-800 hover:bg-gray-700 text-gray-200 px-8 py-3 rounded-lg font-bold text-base transition border border-gray-700">
-                Ver Funciones
-            </a>
-        </div>
-    </section>
-
-    <!-- Características -->
-    <section id="caracteristicas" class="py-20 bg-gray-950 border-t border-b border-gray-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white">Todo lo que tu negocio necesita</h2>
-                <p class="text-gray-400 mt-2">Tecnología ágil con arquitectura de base de datos local rápida e indestructible.</p>
+    <!-- Contenido Principal -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="pt-16 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+            <span class="bg-sky-300 text-sky-900 font-bold tracking-wider uppercase text-xs px-4 py-1.5 rounded-full border border-sky-400 inline-block shadow-sm">
+                Desarrollado por System Gregory PC
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-sky-900 mt-6 mb-4 tracking-tight leading-tight">
+                Sistema de Punto de Venta <br class="hidden sm:inline"/> Rápido y Eficiente
+            </h1>
+            <p class="text-lg text-sky-800 max-w-2xl mx-auto mb-8 font-medium">
+                Optimiza el inventario, agiliza la facturación y mantén el control total de las ventas en tu negocio.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/584161177334?text=Hola,%20deseo%20información%20sobre%20Mandarina%20Code%20POS" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white px-8 py-3 rounded-lg font-bold text-base transition shadow-md">
+                    Solicitar Información
+                </a>
+                <a href="#caracteristicas" class="bg-white hover:bg-sky-50 text-sky-800 px-8 py-3 rounded-lg font-bold text-base transition border border-sky-300 shadow-sm">
+                    Ver Funciones
+                </a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Tarjeta 1 -->
-                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-mandarina-500/50 transition">
-                    <div class="w-12 h-12 bg-mandarina-500/10 rounded-lg flex items-center justify-center text-mandarina-500 text-xl mb-4">
-                        <i class="fas fa-barcode"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Ventas Ultrarrápidas</h3>
-                    <p class="text-gray-400 text-sm">Compatibilidad nativa con lectores de código de barras e impresoras térmicas de tickets (Windows / PDF).</p>
-                </div>
-                <!-- Tarjeta 2 -->
-                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-mandarina-500/50 transition">
-                    <div class="w-12 h-12 bg-mandarina-500/10 rounded-lg flex items-center justify-center text-mandarina-500 text-xl mb-4">
-                        <i class="fas fa-boxes-stacked"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Control de Inventario</h3>
-                    <p class="text-gray-400 text-sm">Registro de productos, ajuste de stock automático y reportes de movimientos en tiempo real.</p>
-                </div>
-                <!-- Tarjeta 3 -->
-                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-mandarina-500/50 transition">
-                    <div class="w-12 h-12 bg-mandarina-500/10 rounded-lg flex items-center justify-center text-mandarina-500 text-xl mb-4">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Seguridad y Roles</h3>
-                    <p class="text-gray-400 text-sm">Gestión de usuarios con control de permisos para administradores y cajeros.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección de Licencia e Identidad -->
-    <section id="licencia" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-gray-900 via-gray-850 to-gray-900 border border-gray-800 rounded-2xl p-8 sm:p-12">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                    <span class="text-mandarina-500 font-semibold text-sm">Garantía y Soporte Técnico Directo</span>
-                    <h2 class="text-3xl font-bold text-white mt-2 mb-4">Licenciamiento Anual Seguro</h2>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Mandarina Code POS cuenta con activaciones mediante claves alfanuméricas exclusivas y soporte técnico directo brindado por su programador y casa de software.
-                    </p>
-                    <ul class="space-y-3 text-sm text-gray-300 mb-6">
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-mandarina-500"></i> Desarrollador: José Gregorio Hernández Calderón</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-mandarina-500"></i> Empresa: System Gregory PC (RIF: V-165419762)</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-mandarina-500"></i> San Cristóbal, Estado Táchira - Venezuela</li>
-                    </ul>
+        <!-- Características -->
+        <section id="caracteristicas" class="py-12 bg-sky-100 border-t border-b border-sky-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-sky-900">Módulos del Sistema</h2>
+                    <p class="text-sky-700 mt-2 font-medium">Tecnología en Visual Basic .NET con base de datos local SQLite.</p>
                 </div>
-                <div class="bg-gray-950 p-6 rounded-xl border border-gray-800 font-mono text-xs text-gray-300">
-                    <div class="flex items-center justify-between border-b border-gray-800 pb-3 mb-4">
-                        <span class="text-gray-500">Mandarina Code POS - Acerca De</span>
-                        <span class="text-green-400">● Licenciado</span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Tarjeta 1 -->
+                    <div class="bg-white p-6 rounded-xl border border-sky-200 shadow-md">
+                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600 text-xl mb-4">
+                            <i class="fas fa-barcode"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sky-900 mb-2">Ventas Ultrarrápidas</h3>
+                        <p class="text-sky-700 text-sm">Soporte nativo para lectores de código de barras e impresoras térmicas de tickets.</p>
                     </div>
-                    <p class="mb-2"><span class="text-gray-500">Estado:</span> <span class="text-green-400 font-bold">LICENCIA ANUAL ACTIVA</span></p>
-                    <p class="mb-2"><span class="text-gray-500">Clave:</span> SGPC-2026-MANDARINA-365D</p>
-                    <p class="mb-2"><span class="text-gray-500">Soporte:</span> 0416-1177334 / 0276-3468123</p>
+                    <!-- Tarjeta 2 -->
+                    <div class="bg-white p-6 rounded-xl border border-sky-200 shadow-md">
+                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600 text-xl mb-4">
+                            <i class="fas fa-boxes-stacked"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sky-900 mb-2">Inventario y Stock</h3>
+                        <p class="text-sky-700 text-sm">Catálogo de productos, ajuste automático de existencias y control de ventas.</p>
+                    </div>
+                    <!-- Tarjeta 3 -->
+                    <div class="bg-white p-6 rounded-xl border border-sky-200 shadow-md">
+                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600 text-xl mb-4">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-sky-900 mb-2">Licencia Segura</h3>
+                        <p class="text-sky-700 text-sm">Control de acceso con claves alfanuméricas de validación anual.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pie de página -->
-    <footer id="contacto" class="border-t border-gray-800 bg-gray-950 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+        <!-- Información de Empresa -->
+        <section id="licencia" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border border-sky-300 rounded-2xl p-8 shadow-md">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider">Desarrollo Profesional</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-sky-900 mt-1 mb-4">System Gregory PC</h2>
+                        <ul class="space-y-3 text-sm text-sky-800 font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-user-check text-sky-600"></i> **Programador:** José Gregorio Hernández Calderón</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-id-card text-sky-600"></i> **RIF:** V-165419762</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-sky-600"></i> San Cristóbal, Estado Táchira - Venezuela</li>
+                        </ul>
+                    </div>
+                    <div class="bg-sky-50 p-6 rounded-xl border border-sky-200 font-mono text-xs text-sky-900 shadow-inner">
+                        <div class="flex items-center justify-between border-b border-sky-200 pb-3 mb-4">
+                            <span class="text-sky-600 font-bold">Mandarina Code POS - Info</span>
+                            <span class="text-green-600 font-bold">● Sistema Operativo</span>
+                        </div>
+                        <p class="mb-2"><span class="text-sky-700">Licencia:</span> <span class="text-sky-900 font-bold">SGPC-2026-MANDARINA-365D</span></p>
+                        <p class="mb-2"><span class="text-sky-700">Teléfono:</span> 0416-1177334</p>
+                        <p class="mb-2"><span class="text-sky-700">Oficina:</span> 0276-3468123</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer id="contacto" class="bg-sky-800 text-white border-t border-sky-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
-                <p class="text-white font-bold text-lg">System Gregory PC</p>
-                <p class="text-gray-500 text-sm mt-1">© 2026 Mandarina Code POS. Todos los derechos reservados.</p>
+                <p class="font-bold text-lg">System Gregory PC</p>
+                <p class="text-sky-200 text-sm">Mandarina Code POS</p>
             </div>
-            <div class="flex space-x-6 text-gray-400">
-                <a href="tel:04161177334" class="hover:text-mandarina-500 transition"><i class="fas fa-phone mr-1"></i> 0416-1177334</a>
-                <a href="tel:02763468123" class="hover:text-mandarina-500 transition"><i class="fas fa-building mr-1"></i> 0276-3468123</a>
+            <div class="text-center">
+                <p class="text-sky-100 text-sm font-semibold">© 2026 - Todos los derechos reservados</p>
+            </div>
+            <div class="flex space-x-4 text-sm text-sky-100 font-medium">
+                <a href="tel:04161177334" class="hover:text-white transition"><i class="fas fa-phone mr-1"></i> 0416-1177334</a>
+                <a href="tel:02763468123" class="hover:text-white transition"><i class="fas fa-building mr-1"></i> 0276-3468123</a>
             </div>
         </div>
     </footer>
