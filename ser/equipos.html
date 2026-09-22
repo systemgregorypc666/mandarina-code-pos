@@ -1,31 +1,210 @@
-📋 Lista de Equipos Recomendados para Mandarina Code POS1.
-  Lectores de Código de Barras ("Pistolas")Para el punto de
-venta (PC Windows) y para las ventas móviles, lo ideal es recomendar modelos estándar que no requieran drivers 
-complejos (Plug & Play por USB o Bluetooth/HID):Opción Económica y Robusta (Punto Fijo - USB):Modelos: Lectores láser estándar USB de 1D (ej. 
-marcas tipo Netum, Eyoyo, Honeywell Voyaguer o genéricos chinos tipo USB Barcode Scanner).
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos Recomendados | Mandarina Code POS</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cielo: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-sky-200 text-sky-950 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-Ventaja: Conectar al puerto USB y listo. En Windows actúan automáticamente como un teclado, 
-  enviando el código leído directo al campo de búsqueda de FormVentas.vb.Opción Inalámbrica 
-(Híbrida para PC y Celular/Android):Modelos: Lector de código de barras Bluetooth / 2.4G Inalámbrico
-(1D/2D para códigos QR y barras).Ventaja: Le sirve tanto para la computadora en la tienda como para la App móvil en la calle conectándolo por Bluetooth.
-  
-  2. Impresoras de Recibos / Tickets TérmicosLas impresoras térmicas son la mejor opción porque no usan tinta (usan papel térmico económico) 
-y son ultrarrápidas:Impresora de Escritorio (Para la Tienda / Oficina - USB / POS-58 o POS-80):Formato: Impresora Térmica de 58 mm o 80 mm 
-(Conexión USB / Serial / LAN).Modelos comunes: POS-58MM, Epson TM-T20, Xprinter XP-58 / XP-N160I.Ventaja: Se conecta por USB al equipo Windows, 
-  se configura como impresora predeterminada y Mandarina Code POS imprime el recibo/factura al instante.Impresora Portátil de Bolsillo 
-(Para Vendedores en Calle - Bluetooth):Formato: Mini Impresora Térmica Portátil de 58 mm (Batería recargable y conexión Bluetooth).
-  Modelos comunes: GOOJPRT PT-210, POS-5802DD, MTP-II.Ventaja: Muy ligera, se lleva en el cinturón o bolso y
-permite imprimir el ticket directamente desde el teléfono Android.3. Kit Completo Sugerido para el Cliente / 
-  DistribuciónEquipoFunciónConexiónLector Láser 1D USB / BTEscaneo rápido de productosUSB / BluetoothImpresora Térmica 58mm / 80mmEmisión de recibos de ventaUSB /
-  BluetoothRollos de Papel Térmico 58mm/80mmConsumible para ticketsN/AGaveta de Dinero Electrónica (Opcional)Apertura automática al 
-cobrarConectada a la Impresora (RJ11)💡 Consejo para la reunión:
+    <!-- Barra de Navegación -->
+    <nav class="bg-sky-600 text-white shadow-lg sticky top-0 z-50 border-b border-sky-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-sky-600 font-bold text-xl shadow">
+                        🍊
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">Mandarina Code <span class="text-sky-200">POS</span></span>
+                </a>
+                <div class="flex space-x-4 text-sm font-semibold">
+                    <a href="index.html" class="bg-sky-700 hover:bg-sky-800 text-white px-4 py-2 rounded-lg transition flex items-center gap-2">
+                        <i class="fas fa-arrow-left"></i> Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-Puedes enviarle o mostrarle esta lista diciéndole:"Para garantizar rapidez y el menor costo operativo,
-  Mandarina Code POS está diseñado para trabajar con lectores de código de barras estándar (USB/Bluetooth)
-e impresoras térmicas de 58mm o 80mm, que no consumen tinta y usan
-  
-  
+    <!-- Contenido Principal -->
+    <main class="flex-grow py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        
+        <!-- Encabezado de la página -->
+        <div class="text-center mb-10">
+            <span class="bg-sky-300 text-sky-900 font-bold tracking-wider uppercase text-xs px-4 py-1.5 rounded-full border border-sky-400 inline-block shadow-sm">
+                Guía de Hardware y Periféricos
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-sky-900 mt-4 mb-2">
+                Equipos Recomendados para Mandarina Code POS
+            </h1>
+            <p class="text-sky-800 text-base font-medium max-w-2xl mx-auto">
+                Hardware probado y 100% compatible para optimizar el punto de venta fijo en Windows y la atención móvil.
+            </p>
+        </div>
+
+        <!-- Sección 1: Lectores de Código de Barras -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-sky-300 shadow-md">
+                <div class="flex items-center gap-3 mb-6 border-b border-sky-200 pb-4">
+                    <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600 text-2xl">
+                        <i class="fas fa-barcode"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-sky-900">1. Lectores de Código de Barras ("Pistolas")</h2>
+                        <p class="text-xs text-sky-700">Modelos estándar Plug & Play (USB o Bluetooth/HID) sin necesidad de drivers complejos.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Opción Fija -->
+                    <div class="bg-sky-50 p-5 rounded-xl border border-sky-200">
+                        <h3 class="font-bold text-sky-900 text-lg mb-2 flex items-center gap-2">
+                            <i class="fas fa-desktop text-sky-600"></i> Opción Económica y Robusta (Punto Fijo - USB)
+                        </h3>
+                        <p class="text-sm text-sky-800 mb-2"><strong>Modelos:</strong> Lectores láser estándar USB de 1D (marcas Netum, Eyoyo, Honeywell Voyager o genéricos chinos tipo USB Barcode Scanner).</p>
+                        <p class="text-xs text-sky-700 bg-white p-3 rounded border border-sky-200">
+                            <strong>Ventaja:</strong> Conectar al puerto USB y listo. En Windows actúan automáticamente como teclado, enviando el código leído directo a la búsqueda en pantalla.
+                        </p>
+                    </div>
+
+                    <!-- Opción Inalámbrica -->
+                    <div class="bg-sky-50 p-5 rounded-xl border border-sky-200">
+                        <h3 class="font-bold text-sky-900 text-lg mb-2 flex items-center gap-2">
+                            <i class="fas fa-wifi text-sky-600"></i> Opción Inalámbrica (Híbrida PC y Celular)
+                        </h3>
+                        <p class="text-sm text-sky-800 mb-2"><strong>Modelos:</strong> Lector de código de barras Bluetooth / 2.4G Inalámbrico (1D/2D para códigos QR y barras).</p>
+                        <p class="text-xs text-sky-700 bg-white p-3 rounded border border-sky-200">
+                            <strong>Ventaja:</strong> Funciona tanto para la computadora en la tienda como para la App móvil en la calle mediante conexión Bluetooth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Impresoras Térmicas -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-sky-300 shadow-md">
+                <div class="flex items-center gap-3 mb-6 border-b border-sky-200 pb-4">
+                    <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600 text-2xl">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-sky-900">2. Impresoras de Recibos / Tickets Térmicos</h2>
+                        <p class="text-xs text-sky-700">Impresión ultrarrápida con papel térmico económico sin uso de tinta.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Impresora Escritorio -->
+                    <div class="bg-sky-50 p-5 rounded-xl border border-sky-200">
+                        <h3 class="font-bold text-sky-900 text-lg mb-2 flex items-center gap-2">
+                            <i class="fas fa-store text-sky-600"></i> Impresora de Escritorio (Tienda / Oficina)
+                        </h3>
+                        <p class="text-sm text-sky-800 mb-1"><strong>Formato:</strong> Térmica de 58 mm o 80 mm (USB / Serial / LAN).</p>
+                        <p class="text-sm text-sky-800 mb-2"><strong>Modelos comunes:</strong> POS-58MM, Epson TM-T20, Xprinter XP-58 / XP-N160I.</p>
+                        <p class="text-xs text-sky-700 bg-white p-3 rounded border border-sky-200">
+                            <strong>Ventaja:</strong> Se conecta por USB al equipo Windows, se configura como impresora predeterminada e imprime tickets al instante.
+                        </p>
+                    </div>
+
+                    <!-- Impresora Portátil -->
+                    <div class="bg-sky-50 p-5 rounded-xl border border-sky-200">
+                        <h3 class="font-bold text-sky-900 text-lg mb-2 flex items-center gap-2">
+                            <i class="fas fa-mobile-alt text-sky-600"></i> Impresora Portátil de Bolsillo (Venta en Calle)
+                        </h3>
+                        <p class="text-sm text-sky-800 mb-1"><strong>Formato:</strong> Mini Térmica Portátil 58 mm (Batería recargable y Bluetooth).</p>
+                        <p class="text-sm text-sky-800 mb-2"><strong>Modelos comunes:</strong> GOOJPRT PT-210, POS-5802DD, MTP-II.</p>
+                        <p class="text-xs text-sky-700 bg-white p-3 rounded border border-sky-200">
+                            <strong>Ventaja:</strong> Ultraligera, se lleva en cinturón o bolso e imprime tickets directamente desde el teléfono Android.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Tabla del Kit Completo -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 border border-sky-300 shadow-md">
+                <h2 class="text-2xl font-bold text-sky-900 mb-4 flex items-center gap-2">
+                    <i class="fas fa-boxes text-sky-600"></i> 3. Kit Completo Sugerido para Distribución
+                </h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-sky-600 text-white font-bold">
+                                <th class="p-3 rounded-tl-lg">Equipo</th>
+                                <th class="p-3">Función</th>
+                                <th class="p-3 rounded-tr-lg">Conexión</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-sky-200 text-sky-900 font-medium">
+                            <tr class="hover:bg-sky-50">
+                                <td class="p-3 font-bold">Lector Láser 1D USB / BT</td>
+                                <td class="p-3">Escaneo rápido de productos</td>
+                                <td class="p-3">USB / Bluetooth</td>
+                            </tr>
+                            <tr class="hover:bg-sky-50">
+                                <td class="p-3 font-bold">Impresora Térmica 58mm / 80mm</td>
+                                <td class="p-3">Emisión de recibos de venta</td>
+                                <td class="p-3">USB / Bluetooth</td>
+                            </tr>
+                            <tr class="hover:bg-sky-50">
+                                <td class="p-3 font-bold">Rollos de Papel Térmico 58mm/80mm</td>
+                                <td class="p-3">Consumible para tickets</td>
+                                <td class="p-3">N/A</td>
+                            </tr>
+                            <tr class="hover:bg-sky-50">
+                                <td class="p-3 font-bold">Gaveta de Dinero Electrónica (Opcional)</td>
+                                <td class="p-3">Apertura automática al cobrar</td>
+                                <td class="p-3">Conectada a Impresora (RJ11)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-sky-800 text-white border-t border-sky-700 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-bold text-base">System Gregory PC</p>
+                <p class="text-sky-200 text-xs">Soporte Técnico: 0416-1177334 / 0276-3468123</p>
+            </div>
+            <p class="text-sky-100 text-xs font-semibold">© 2026 Mandarina Code POS - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+</html>
 
 
   
-rollos de papel muy económicos."¡Esto refuerza la confianza en ti como su asesor tecnológico global para la distribución del software!
+
